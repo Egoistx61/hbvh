@@ -1,0 +1,18 @@
+{
+  "name": "nocturne-focus",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -c tailwind.config.js -i src/input.css -o public/assets/css/styles.css --minify",
+    "build:sw": "node scripts/build-sw.mjs",
+    "build": "pnpm build:css && pnpm build:sw",
+    "dev": "pnpm build && serve public -l 3000 --no-clipboard"
+  },
+  "devDependencies": {
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/forms": "^0.5.11",
+    "serve": "^14.2.6",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^3.4.19"
+  }
+}
